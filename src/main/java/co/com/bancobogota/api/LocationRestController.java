@@ -36,7 +36,6 @@ public class LocationRestController {
 		return autor;
 	}
 	
-	
 	@PostMapping( path = "/registrar" )
 	public void registrar(@RequestBody Location entidad) {
 		iLocationService.registrar(entidad);
