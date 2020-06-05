@@ -25,7 +25,7 @@ public class Location {
 	private String name;
 	
 	@Column(name = "area_m2", nullable = false)
-	private String area_m2;
+	private int area_m2;
 	
 	@ManyToOne
 	@JoinColumn(name = "location_id", nullable = true)
