@@ -1,5 +1,11 @@
 # back-exam-full-stack
-Desarrollo backend - Fullstack Developer candidates tech exam 
+**Desarrollo backend - Fullstack Developer candidates tech exam**
+
+### GIT CLONE
+````
+  git clone https://github.com/JTIBA-14/back-exam-full-stack.git
+````
+
 
 Se agrega ***docker*** para proveer la base de datos en ***postgressql***  el cual esta ubicado en 
 ```
