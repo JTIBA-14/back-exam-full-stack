@@ -20,6 +20,15 @@ Se agrega ***docker*** para proveer la base de datos en ***postgressql***  el cu
   ``` 
     prueba_exam 
   ```
+  **3.** La conexión a la base de datos se establecio con las siguientes credenciales:
+  ``` 
+    user: postsgres
+    password: postgres-exam
+  ```
+  en caso de querer **modificar** estos datos de **conexión** se debe dirigir al archvo **application-dev.yml**
+  ````
+    src/main/resources/application-dev.yml
+  ````
   
 Una vez se tenga ***inicializado*** el **docker** y posteriormente se haya creado la base de datos para trabajar se procede a inicializar el proyecto el cual esta desarrollo con ***spring boot 2.3.0***   
 
