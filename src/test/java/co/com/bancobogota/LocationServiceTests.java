@@ -88,7 +88,7 @@ public class LocationServiceTests {
     void validateErrorDestroyLocation() {
         int id = 8;
         System.out.println(iLocationService.eliminar(id));
-        //assertEquals( false, iLocationService.eliminar(id));
+        assertEquals( false, iLocationService.eliminar(id));
     }
 
 
