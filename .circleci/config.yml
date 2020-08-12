@@ -17,11 +17,12 @@ jobs:
       - run:
           name: install contenedores
           command: |
-            docker-compose -f src/main/resources/docker-javaclient/docker-compose.yml up -d
             docker-compose -f src/main/resources/docker-postgres/docker-compose.yml up -d
       - run:
           name: exec tests
-          command: docker-compose -f src/main/resources/docker-javaclient/docker-compose.yml run javaclient mvn install
+          command: |
+            docker-compose up -d
+            docker-compose run javaclient mvn install
 workflows:
   maven_test:
     jobs:
