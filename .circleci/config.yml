@@ -15,10 +15,13 @@ jobs:
             sudo mv docker-compose /usr/local/bin/docker-compose
             sudo chmod +x /usr/local/bin/docker-compose
       - run:
-          name: install dependencies and exec tests
+          name: install contenedores
           command: |
+            docker-compose -f src/main/resources/docker-javaclient/docker-compose.yml up -d
             docker-compose -f src/main/resources/docker-postgres/docker-compose.yml up -d
-            docker-compose run javaclient mvn install
+      - run:
+          name: exec tests
+          command: docker-compose run javaclient mvn install
 workflows:
   maven_test:
     jobs:
