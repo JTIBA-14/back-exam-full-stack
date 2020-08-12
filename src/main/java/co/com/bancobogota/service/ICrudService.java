@@ -8,9 +8,9 @@ public interface ICrudService<T> {
 
 	public T listarPorId(int id);
 
-	public void registrar(T entidad);
+	public T registrar(T entidad);
 
-	public void actualizar(T entidad);
+	public T actualizar(T entidad);
 
-	public void eliminar(int id);
+	public boolean eliminar(int id);
 }

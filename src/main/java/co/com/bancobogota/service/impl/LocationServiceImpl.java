@@ -26,18 +26,18 @@ public class LocationServiceImpl implements ILocationService {
 	}
 
 	@Override
-	public void registrar(Location entidad) {
+	public Location registrar(Location entidad) {
 		try {
-			repos.save(entidad);
+			return repos.save(entidad);
         } catch(Exception e ) {
             throw new RuntimeException(e.getMessage());
         }		
 	}
 
 	@Override
-	public void actualizar(Location entidad) {
+	public Location actualizar(Location entidad) {
 		try {
-			repos.save(entidad);
+			return repos.save(entidad);
         } catch(Exception e ) {
             throw new RuntimeException(e.getMessage());
         }
@@ -45,8 +45,13 @@ public class LocationServiceImpl implements ILocationService {
 	}
 
 	@Override
-	public void eliminar(int id) {
-		repos.deleteById(id);
+	public boolean eliminar(int id) {
+		try {
+			repos.deleteById(id);
+			return true;
+		} catch(Exception e ) {
+			return false;
+		}
 	}
 
 	

@@ -31,4 +31,30 @@ public class Location {
 	@JoinColumn(name = "location_id", nullable = true)
 	private Location location;
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setArea_m2(int area_m2) {
+		this.area_m2 = area_m2;
+	}
+	public int getArea_m2() {
+		return this.area_m2;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+
+	public Location getLocationId() {
+		return this.location;
+	}
 }
