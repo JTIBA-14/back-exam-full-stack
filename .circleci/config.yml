@@ -21,7 +21,7 @@ jobs:
             docker-compose -f src/main/resources/docker-postgres/docker-compose.yml up -d
       - run:
           name: exec tests
-          command: docker-compose run javaclient mvn install
+          command: docker-compose -f src/main/resources/docker-javaclient/docker-compose.yml run javaclient mvn install
 workflows:
   maven_test:
     jobs:
